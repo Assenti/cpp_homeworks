@@ -34,9 +34,9 @@ void Group::addNewStudent()
 	std::cin >> _age;
 	std::cout << "Input student's rating: ";
 	std::cin >> _rating;
-	students->setName(_name);
-	students->setAge(_age);
-	students->setRating(_rating);
+	students[students_counter].setName(_name);
+	students[students_counter].setAge(_age);
+	students[students_counter].setRating(_rating);
 	++students_counter;
 }
 void Group::displayAllStudentsInfo()
@@ -44,9 +44,9 @@ void Group::displayAllStudentsInfo()
 	std::cout << "TOTAL NUMBER OF STUDENTS: " << students_counter << std::endl;
 	for (int i = 0; i < students_counter; i++)
 	{
-		std::cout << students_counter << ") " << "NAME: " << students[students_counter].getName();
-		std::cout << " AGE: " << students[students_counter].getAge();
-		std::cout << " RATING: " << students[students_counter].getRating() << std::endl;
+		std::cout << "Student " << i+1 << ": " << "NAME: " << students[i].getName();
+		std::cout << " AGE: " << students[i].getAge();
+		std::cout << " RATING: " << students[i].getRating() << std::endl;
 	}
 }
 void Group::displayGroupInfo()
@@ -63,5 +63,5 @@ double Group::getStudentsAverageRating()
 		sum += students[i].getRating();
 	}
 	students_average_rating = sum / students_counter;
-	return sum / students_counter;
+	return students_average_rating;
 }

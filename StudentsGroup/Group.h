@@ -3,12 +3,12 @@
 #define STUDENTS_MAX 20
 class Group
 {
-public:
-	static int students_counter;
+private:
 	std::string group_id, group_subject;
 	double students_average_rating;
 	Student * students = new Student[STUDENTS_MAX];
 public:
+	static int students_counter;
 	Group();
 	~Group();
 	//Getters&Setters
