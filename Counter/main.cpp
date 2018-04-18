@@ -3,8 +3,9 @@
 int main()
 {
 	Counter one;
-	one.setStart(1);
-	std::cout << one.getStart() << std::endl;
+	one.initializeCounter();
+	one.counterOneStep;
+	one.displayCurrentCounter();
 
 
 	system("pause");

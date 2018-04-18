@@ -41,6 +41,12 @@ public:
 	{
 		return counter;
 	}
+
 	//Set initialize values: start, end, step
+	void initializeCounter();
+	//Makes one step in counter
+	void counterOneStep();
+	//Display the current value of counter
+	void displayCurrentCounter();
 };
 

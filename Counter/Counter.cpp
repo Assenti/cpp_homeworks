@@ -38,3 +38,27 @@ double Counter::getCounter()
 {
 	return counter;
 }
+
+void Counter::initializeCounter()
+{
+	std::cout << "Input the start value: ";
+	std::cin >> start;
+	std::cout << "Input the end value: ";
+	std::cin >> end;
+	std::cout << "Input the step size: ";
+	std::cin >> step;
+}
+void Counter::counterOneStep()
+{
+	counter = start;
+	counter += step;
+	if (counter == end)
+	{
+		counter = 0;
+	}
+	start = counter;
+}
+void Counter::displayCurrentCounter()
+{
+	std::cout << getCounter() << std::endl;
+}
