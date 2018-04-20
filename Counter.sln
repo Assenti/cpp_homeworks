@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentsGroup", "StudentsGr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Contacts", "Contacts\Contacts.vcxproj", "{587F8B10-0FFB-456A-8747-1876C4BBE502}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Constr_delegation_and_Objects_counting", "Constr_delegation_and_Objects_counting\Constr_delegation_and_Objects_counting.vcxproj", "{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x64.Build.0 = Release|x64
 		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x86.ActiveCfg = Release|Win32
 		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x86.Build.0 = Release|Win32
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Debug|x64.ActiveCfg = Debug|x64
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Debug|x64.Build.0 = Debug|x64
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Debug|x86.Build.0 = Debug|Win32
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Release|x64.ActiveCfg = Release|x64
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Release|x64.Build.0 = Release|x64
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Release|x86.ActiveCfg = Release|Win32
+		{5E2C3627-2AF3-46D6-AEF2-E22ED0FB46FB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
