@@ -1,18 +1,21 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
 
 class Contact
 {
 private:
-	char * full_name;
+	std::string full_name;
 	long long int mobile;
 public:
 	Contact();
-	Contact(char *, long long int);
+	Contact(std::string , long long int);
 	~Contact();
-	void setFullName(char * full_name);
-	char * getFullName();
-	void setMoblie(long long int mobile);
+	void setFullName(std::string);
+	std::string getFullName();
+	void setMoblie(long long int);
 	long long int getMobile();
 };
 

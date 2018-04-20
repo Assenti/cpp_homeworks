@@ -1,22 +1,17 @@
 #include "Contact.h"
 
-Contact::Contact()
-{
-}
-Contact::Contact(char * full_name, long long int mobile)
+Contact::Contact(){}
+Contact::Contact(std::string full_name, long long int mobile)
 {
 	this->full_name = full_name;
 	this->mobile = mobile;
 }
-Contact::~Contact()
-{
-	delete[] full_name;
-}
-void Contact::setFullName(char * full_name)
+Contact::~Contact(){}
+void Contact::setFullName(std::string full_name)
 {
 	this->full_name = full_name;
 }
-char * Contact::getFullName()
+std::string Contact::getFullName()
 {
 	return full_name;
 }

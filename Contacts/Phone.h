@@ -1,9 +1,5 @@
 #pragma once
 #include "Contact.h"
-#include <vector>
-#include <string>
-#include <fstream>
-std::string file = "PhoneContacts.txt";
 
 class Phone
 {
@@ -16,10 +12,10 @@ public:
 	~Phone();
 	void setPhoneName(std::string);
 	std::string getPhoneName();
-	void addNewContact(char *, long long int);
-	void deleteContact(char *);
+	void addNewContact(std::string, long long int);
+	void deleteContact(std::string);
 	void showContacts();
-	Contact searchContact(char *);
+	Contact searchContact(std::string);
 	void saveToFile();
 	void readFromFile();
 };
