@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Counter", "Counter\Counter.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentsGroup", "StudentsGroup\StudentsGroup.vcxproj", "{746A47A5-EC66-43A7-841C-BA2158676B38}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Contacts", "Contacts\Contacts.vcxproj", "{587F8B10-0FFB-456A-8747-1876C4BBE502}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{746A47A5-EC66-43A7-841C-BA2158676B38}.Release|x64.Build.0 = Release|x64
 		{746A47A5-EC66-43A7-841C-BA2158676B38}.Release|x86.ActiveCfg = Release|Win32
 		{746A47A5-EC66-43A7-841C-BA2158676B38}.Release|x86.Build.0 = Release|Win32
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Debug|x64.ActiveCfg = Debug|x64
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Debug|x64.Build.0 = Debug|x64
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Debug|x86.ActiveCfg = Debug|Win32
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Debug|x86.Build.0 = Debug|Win32
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x64.ActiveCfg = Release|x64
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x64.Build.0 = Release|x64
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x86.ActiveCfg = Release|Win32
+		{587F8B10-0FFB-456A-8747-1876C4BBE502}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
