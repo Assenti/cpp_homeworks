@@ -13,7 +13,7 @@ public:
 		return instance;
 	}
 	~ListOfStudents();
-	void addNewStudent(std::string, int, int);
+	void addNewStudent(std::string, int);
 	void deleteStudent(std::string);
 	double getAverageGrade();
 	int getMinGrade();
@@ -21,5 +21,7 @@ public:
 	void sortStudentsByGradeAscending();
 	void sortStudentsByGradeDescendingly();
 	void showStudents();
+	//По позиции 5) задания:
+	//Не возможно реализовать копию объекта, т.к. применен конструктор Singleton
 };
 

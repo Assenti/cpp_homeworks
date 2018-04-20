@@ -11,7 +11,7 @@ private:
 	int grade, id;
 	static int counter;
 public:
-	OtherStudent(std::string, int, int);
+	OtherStudent(std::string, int);
 	~OtherStudent();
 	void setName(std::string);
 	std::string getName();

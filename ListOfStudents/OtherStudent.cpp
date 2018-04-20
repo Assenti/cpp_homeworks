@@ -1,10 +1,10 @@
 #include "OtherStudent.h"
 
-OtherStudent::OtherStudent(std::string, int grade, int id)
+OtherStudent::OtherStudent(std::string name, int grade)
 {
 	this->name = name;
 	this->grade = grade;
-	this->id = id;
+	this->id = counter;
 	++counter;
 }
 OtherStudent::~OtherStudent(){}
@@ -25,17 +25,10 @@ int OtherStudent::getGrade()
 {
 	return grade;
 }
-
-void OtherStudent::setId(int)
-{
-	this->id = counter;
-}
-
 int OtherStudent::getId()
 {
 	return id;
 }
-
 int OtherStudent::getCounter()
 {
 	return counter;

@@ -6,15 +6,15 @@ ListOfStudents::ListOfStudents()
 ListOfStudents::~ListOfStudents()
 {
 }
-void ListOfStudents::addNewStudent(std::string name, int grade, int id)
+void ListOfStudents::addNewStudent(std::string name, int grade)
 {
-	students.push_back(OtherStudent(name, grade, id));
+	students.push_back(OtherStudent(name, grade));
 }
 void ListOfStudents::deleteStudent(std::string name)
 {
+	int i = 0;
 	for (OtherStudent c : students)
 	{
-		int i = 0;
 		if (c.getName() == name)
 		{
 			students.erase(students.begin() + i);
@@ -43,7 +43,6 @@ int ListOfStudents::getMinGrade()
 	}
 	return min;
 }
-
 int ListOfStudents::getMaxGrade()
 {
 	int max = 0;
@@ -56,7 +55,6 @@ int ListOfStudents::getMaxGrade()
 	}
 	return max;
 }
-
 void ListOfStudents::sortStudentsByGradeAscending()
 {
 	for (int i = 0; i < students.size()-1; i++)
@@ -70,7 +68,6 @@ void ListOfStudents::sortStudentsByGradeAscending()
 		}
 	}
 }
-
 void ListOfStudents::sortStudentsByGradeDescendingly()
 {
 	for (int i = 0; i < students.size() - 1; i++)
@@ -84,12 +81,11 @@ void ListOfStudents::sortStudentsByGradeDescendingly()
 		}
 	}
 }
-
 void ListOfStudents::showStudents()
 {
 	for (OtherStudent c : students)
 	{
-		std::cout << "ID: " << c.getId() << "NAME: " << c.getName() << " GRADE: " << c.getGrade() << std::endl;
+		std::cout << "ID: " << c.getId() << " NAME: " << c.getName() << " GRADE: " << c.getGrade() << std::endl;
 	}
 }
 
