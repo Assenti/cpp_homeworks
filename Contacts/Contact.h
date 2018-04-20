@@ -15,7 +15,7 @@ public:
 	~Contact();
 	void setFullName(std::string);
 	std::string getFullName();
-	void setMoblie(long long int);
+	void setMobile(long long int);
 	long long int getMobile();
 };
 

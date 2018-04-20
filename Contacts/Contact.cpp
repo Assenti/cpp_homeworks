@@ -15,7 +15,7 @@ std::string Contact::getFullName()
 {
 	return full_name;
 }
-void Contact::setMoblie(long long int mobile)
+void Contact::setMobile(long long int mobile)
 {
 	this->mobile = mobile;
 }

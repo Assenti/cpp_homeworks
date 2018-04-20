@@ -16,7 +16,6 @@ std::string Phone::getPhoneName()
 {
 	return phone_name;
 }
-
 void Phone::addNewContact(std::string full_name, long long int mobile)
 {
 	contacts.push_back(Contact(full_name, mobile));
@@ -33,7 +32,6 @@ void Phone::deleteContact(std::string full_name)
 		i++;
 	}
 }
-
 void Phone::showContacts()
 {
 	for (Contact c : contacts)
@@ -41,28 +39,46 @@ void Phone::showContacts()
 		std::cout << "NAME: " << c.getFullName() << " PHONE: " << c.getMobile() << std::endl;
 	}
 }
-
-Contact Phone::searchContact(std::string full_name)
+void Phone::searchContact(std::string full_name)
 {
-	return Contact();
+	bool match = false;
+	for (Contact c : contacts)
+	{
+		if (c.getFullName() == full_name)
+		{
+			std::cout << "Such contact exists: " << c.getFullName() << " " << c.getMobile() << std::endl;
+			match = true;
+		}
+	}
+	if (!match)
+	{
+		std::cout << "There is no such contact" << std::endl;
+	}
 }
-
 void Phone::saveToFile()
 {
 	std::ofstream out("PhoneContacts.txt");
+
 	for (Contact c : contacts)
 	{
-		out << c.getFullName() << c.getMobile();
+		out << c.getFullName() << " " << c.getMobile() << " ";
 	}
 	out.close();
 }
-
 void Phone::readFromFile()
 {
 	std::ifstream in("PhoneContacts.txt");
+	
 	for (Contact c : contacts)
 	{
-		in >> c.getFullName() >> c.getMobile();
+		std::string _full_name;
+		long long int _mobile;
+		in >> _full_name >> _mobile;
+		c.setFullName(_full_name);
+		c.setMobile(_mobile);
+		std::cout << "NAME: " << c.getFullName() << " PHONE: " << c.getMobile() << std::endl;
 	}
 	in.close();
 }
+
+

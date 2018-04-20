@@ -15,7 +15,7 @@ public:
 	void addNewContact(std::string, long long int);
 	void deleteContact(std::string);
 	void showContacts();
-	Contact searchContact(std::string);
+	void searchContact(std::string);
 	void saveToFile();
 	void readFromFile();
 };
