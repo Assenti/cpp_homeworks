@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Employees", "Employees\Empl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Circle", "Circle\Circle.vcxproj", "{4C236235-F7A0-4A86-929C-59023F4D0DCA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Airplane", "Airplane\Airplane.vcxproj", "{9BB8DB02-7EBF-462D-8002-087A46719036}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{4C236235-F7A0-4A86-929C-59023F4D0DCA}.Release|x64.Build.0 = Release|x64
 		{4C236235-F7A0-4A86-929C-59023F4D0DCA}.Release|x86.ActiveCfg = Release|Win32
 		{4C236235-F7A0-4A86-929C-59023F4D0DCA}.Release|x86.Build.0 = Release|Win32
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Debug|x64.ActiveCfg = Debug|x64
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Debug|x64.Build.0 = Debug|x64
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Debug|x86.ActiveCfg = Debug|Win32
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Debug|x86.Build.0 = Debug|Win32
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x64.ActiveCfg = Release|x64
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x64.Build.0 = Release|x64
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x86.ActiveCfg = Release|Win32
+		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
