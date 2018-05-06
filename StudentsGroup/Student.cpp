@@ -3,12 +3,20 @@
 Student::Student()
 {
 }
+Student::Student(std::string name)
+{
+	this->name = name;
+}
+Student::Student(Student && other)
+{
+	name = std::move(other.name);
+}
 Student::~Student()
 {
 }
-void Student::setName(std::string _name)
+void Student::setName(std::string name)
 {
-	name = _name;
+	this->name = name;
 }
 std::string Student::getName()
 {

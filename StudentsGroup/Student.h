@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+
 class Student
 {
 private:
@@ -9,13 +10,15 @@ private:
 	double rating;
 public:
 	Student();
+	Student(std::string);
+	Student(Student &&);
 	~Student();
-	//Getters&Setters
-	void setName(std::string _name);
+
+	void setName(std::string);
 	std::string getName();
-	void setAge(int _age);
+	void setAge(int);
 	int getAge();
-	void setRating(double _rating);
+	void setRating(double);
 	double getRating();
 };
 
