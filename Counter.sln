@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Circle", "Circle\Circle.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Airplane", "Airplane\Airplane.vcxproj", "{9BB8DB02-7EBF-462D-8002-087A46719036}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Apartment_house", "Apartment_house\Apartment_house.vcxproj", "{1B81DECC-13A2-43AB-BDF4-354324CC3089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x64.Build.0 = Release|x64
 		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x86.ActiveCfg = Release|Win32
 		{9BB8DB02-7EBF-462D-8002-087A46719036}.Release|x86.Build.0 = Release|Win32
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Debug|x64.ActiveCfg = Debug|x64
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Debug|x64.Build.0 = Debug|x64
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Debug|x86.Build.0 = Debug|Win32
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Release|x64.ActiveCfg = Release|x64
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Release|x64.Build.0 = Release|x64
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Release|x86.ActiveCfg = Release|Win32
+		{1B81DECC-13A2-43AB-BDF4-354324CC3089}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
