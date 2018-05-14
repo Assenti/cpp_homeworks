@@ -16,6 +16,7 @@ T getAverage(std::vector<T> elements)
 	return sum / elements.size();
 }
 
+#pragma region Variadic templates samples
 template <class T1, class... T2>
 void print(T1 t1, T2... t2)
 {
@@ -39,6 +40,7 @@ bool isInRadius(T ... points)
 	return false;
 }
 
+#pragma endregion
 
 int main()
 {
