@@ -54,15 +54,13 @@ int main()
 	//std::cout << isInRadius(Pixel{ 2,4 }, Pixel{ 3,3 }, Pixel{ 6,6 }) << std::endl;
 	//print(1, '2', "class", 4.5, 110L);
 
-	MyVector<int> a;// (std::initializer_list<int>{1, 2, 3});
+	MyVector<int> a(std::initializer_list<int>{1, 2, 3});
 	MyVector<int> b;
 	MyVector<int> c(std::initializer_list<int>{6, 7, 8, 9});
 	a.push_back(4);
+	a += 5;
 	b = c;
-	/*a += 5;
-	b += 6;
-	a += b;*/
-	b.erase(b, 0);
+	b.erase(1);
 	for (int i = 0; i < b.count(); i++)
 	{
 		std::cout << b[i] << std::endl;

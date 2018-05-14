@@ -48,20 +48,20 @@ public:
 			data = (T*)realloc(data, --size * sizeof(T));
 		}
 	}
-
-	void erase(MyVector<T> data, const int index)
+	//Pass the index of removing element
+	void erase(const int index)
 	{
-		T * data_temple;
-		for (int i = 0, j = 0; i < data.count(); i++, j++)
+		T * data_temple = new T[size-1];
+		for (int i = 0, j = 0; i < size; i++)
 		{
-			if (data[i] != index)
+			if (i != index)
 			{
 				data_temple[j] = data[i];
+				j++;
 			}
 		}
-		--size;
+		size--;
 		data = data_temple;
-		delete[] data_temple;
 	}
 
 	T & operator [](const int & pos)
