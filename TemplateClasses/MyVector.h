@@ -14,9 +14,9 @@ public:
 		size = 0;
 	}
 
-	MyVector(std::initializer_list<T> & elements)
+	MyVector(std::initializer_list<T> elements)
 	{
-		for (T & element : elements) 
+		for (T element : elements) 
 		{
 			this->push_back(element);
 		}
@@ -49,18 +49,19 @@ public:
 		}
 	}
 
-	void erase(const int & index)
+	void erase(MyVector<T> data, const int index)
 	{
-		T * data_copy = nullptr;
-		for (int i = 0, j = 0; i < size; i++, j++)
+		T * data_temple;
+		for (int i = 0, j = 0; i < data.count(); i++, j++)
 		{
-			if (i != index)
+			if (data[i] != index)
 			{
-				data_copy[j] = data[i];
+				data_temple[j] = data[i];
 			}
 		}
-		data = (T*)realloc(data, --size * sizeof(T));
-		data = data_copy;
+		--size;
+		data = data_temple;
+		delete[] data_temple;
 	}
 
 	T & operator [](const int & pos)
@@ -78,6 +79,16 @@ public:
 		for (int i = 0; i < OtherVector.count(); i++)
 		{
 			push_back(OtherVector[i]);
+		}
+	}
+
+	void operator = (MyVector & OtherVector)
+	{
+		size = OtherVector.count();
+		data = new T[size];
+		for (int i = 0; i < OtherVector.count(); i++)
+		{
+			data[i] = OtherVector[i];
 		}
 	}
 
