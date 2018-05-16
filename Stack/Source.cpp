@@ -1,16 +1,12 @@
 #include <iostream>
 #include "Stack.h"
-
+#include "StackDynamic.h"
+#include <stack>
 
 int main()
 {
-	char sample[3];
-	sample[0] = 's';
-	sample[1] = 'a';
-	sample[2] = 'a';
-	sample[3] = 'b';
-	std::cout << sample[3] << std::endl;
-	
+/*
+#pragma region Stack fixed size examples
 	Stack<char, 10> first;
 	first.push('F');
 	first += 'i';
@@ -36,6 +32,28 @@ int main()
 	first += 'Y';
 	first += 'Z';
 	std::cout << first.peek() << std::endl;
+#pragma endregion
+*/
+
+#pragma region Stack dynamic examples
+	StackDynamic<char> str;
+	str.push('A');
+	str.push('b');
+	str.push('c');
+	str.push('d');
+	str.push('e');
+	str.push('f');
+	std::cout << str.peek() << std::endl;
+	std::cout << str.pop() << std::endl;
+	std::cout << str.getSize() << " | " << str.getTop() << std::endl;
+	str.clear();
+	std::cout << str.isEmpty() << std::endl;
+	str.push('A');
+	std::cout << str.peek() << std::endl;
+
+
+#pragma endregion
+
 
 	system("pause");
 	return 0;

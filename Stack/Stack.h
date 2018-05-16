@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 
 //LIFO
 //Fixed size
@@ -17,7 +16,11 @@ public:
 
 	void push(const T & elem)
 	{
-		data[iterator++] = elem;
+		if(iterator<size)
+		{
+			data[iterator++] = elem;
+		}
+		
 	}
 
 	T pop()
@@ -61,7 +64,7 @@ public:
 
 	void clear()
 	{
-		for (int i = 0; i < iterator; i++)
+		for (int i = 0; i < size; i++)
 			data[i] = ' ';
 		iterator = 0;
 	}
