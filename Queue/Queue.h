@@ -1,5 +1,4 @@
 #pragma once
-#include <initializer_list>
 
 //FIFO
 template<class T>
@@ -11,9 +10,8 @@ private:
 public:
 	Queue()
 	{
-		size = 1;
-		data = new T[size];
-		data[0] = head = tail = 0;
+		data = nullptr;
+		size = head = tail = 0;
 	}
 
 	size_t getSize()
@@ -26,16 +24,20 @@ public:
 		return tail;
 	}
 
-	T enQueue(const T & elem)
+	void enQueue(const T & elem)
 	{
-		if (tail + 1 >= size)
+		if (data == nullptr)
+		{
+			++size;
+			data = new T[size];
+		}
+		else if (tail + 1 >= size)
 		{
 			size *= 2;
-			data = (T*)realloc(data, ++size * sizeof(T));
+			data = (T*)realloc(data, size * sizeof(T));
+			++tail;
 		}
 		data[tail] = elem;
-		return data[tail];
-		tail++;
 	}
 
 	T deQueue()

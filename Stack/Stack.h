@@ -1,48 +1,69 @@
 #pragma once
-#include <initializer_list>
+#include <string>
 
-template<class T>
+//LIFO
+//Fixed size
+template<class T, size_t size>
 class Stack
 {
 private:
-	T * data;
-	size_t size, top;
+	T data[size];
+	size_t iterator;
 public:
 	Stack()
 	{
-		size = 1, top = 0;
-		data = new T[size];
-		data[0] = 0;
-	}
-
-	size_t getSize()
-	{
-		return size;
-	}
-
-	size_t getTop()
-	{
-		return top;
+		iterator = 0;
 	}
 
 	void push(const T & elem)
 	{
-		if (top + 1 >= size)
-		{
-			size *= 2;
-			data = (T*)realloc(data, ++size * sizeof(T));
-		}
-		data[++top] = elem;
+		data[iterator++] = elem;
 	}
 
 	T pop()
 	{
-		return data[top--];
+		return data[--iterator];
 	}
 
 	T peek()
 	{
-		return data[top];
+		return data[iterator-1];
+	}
+
+	size_t count()
+	{
+		return iterator;
+	}
+
+	bool isEmpty()
+	{
+		if (data[0] == ' ')
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	bool isFull()
+	{
+		if(size == iterator)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	void clear()
+	{
+		for (int i = 0; i < iterator; i++)
+			data[i] = ' ';
+		iterator = 0;
 	}
 
 	void operator += (const T & elem)
@@ -55,14 +76,8 @@ public:
 		pop();
 	}
 
-	T operator [](int index) const
-	{
-		return data[index];
-	}
-
 	~Stack()
 	{
-		delete[] data;
 	}
 
 };
