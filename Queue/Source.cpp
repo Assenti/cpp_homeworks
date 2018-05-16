@@ -10,8 +10,6 @@ int main()
 	//one += "Lizzy"; //3rd in queue
 	std::cout << one.getSize() << std::endl;
 
-	for (int i = 0; i < one.getTail(); i++)
-		std::cout << one[i] << std::endl;
 
 	//std::cout << one.addToHead("Mathew") << std::endl;
 	//std::cout << one.deQueue() << std::endl;

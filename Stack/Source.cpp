@@ -5,7 +5,7 @@
 
 int main()
 {
-/*
+
 #pragma region Stack fixed size examples
 	Stack<char, 10> first;
 	first.push('F');
@@ -33,7 +33,6 @@ int main()
 	first += 'Z';
 	std::cout << first.peek() << std::endl;
 #pragma endregion
-*/
 
 #pragma region Stack dynamic examples
 	StackDynamic<char> str;

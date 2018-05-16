@@ -69,11 +69,6 @@ public:
 		deQueue();
 	}
 
-	T operator [](int index) const
-	{
-		return data[index];
-	}
-
 	~Queue()
 	{
 		delete[] data;
