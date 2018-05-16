@@ -1,0 +1,80 @@
+#pragma once
+#include <initializer_list>
+
+//FIFO
+template<class T>
+class Queue
+{
+private:
+	T * data;
+	size_t size, head, tail;
+public:
+	Queue()
+	{
+		size = 1;
+		data = new T[size];
+		data[0] = head = tail = 0;
+	}
+
+	size_t getSize()
+	{
+		return size;
+	}
+
+	size_t getTail()
+	{
+		return tail;
+	}
+
+	T enQueue(const T & elem)
+	{
+		if (tail + 1 >= size)
+		{
+			size *= 2;
+			data = (T*)realloc(data, ++size * sizeof(T));
+		}
+		data[tail] = elem;
+		return data[tail];
+		tail++;
+	}
+
+	T deQueue()
+	{
+		return data[head++];
+	}
+
+	T addToHead(const T & elem)
+	{
+		T * temple_data = new T[size+1];
+		for (int i = 1, j = 0; i < size+1; i++)
+		{
+			temple_data[i] = data[j];
+			j++;
+		}
+		size++;
+		data = temple_data;
+		data[head] = elem;
+		return data[head];
+	}
+
+	void operator += (const T & elem)
+	{
+		enQueue(elem);
+	}
+
+	void operator --(int)
+	{
+		deQueue();
+	}
+
+	T operator [](int index) const
+	{
+		return data[index];
+	}
+
+	~Queue()
+	{
+		delete[] data;
+	}
+};
+

@@ -4,7 +4,7 @@ int main()
 {
 	Counter one;
 	one.initializeCounter();
-	one.counterOneStep;
+	one.counterOneStep();
 	one.displayCurrentCounter();
 
 
