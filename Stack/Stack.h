@@ -20,7 +20,6 @@ public:
 		{
 			data[iterator++] = elem;
 		}
-		
 	}
 
 	T pop()

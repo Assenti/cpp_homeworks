@@ -3,9 +3,9 @@
 #include "StackDynamic.h"
 #include <stack>
 
+
 int main()
 {
-
 #pragma region Stack fixed size examples
 	Stack<char, 10> first;
 	first.push('F');
@@ -34,6 +34,8 @@ int main()
 	std::cout << first.peek() << std::endl;
 #pragma endregion
 
+	std::cout << "=================================" << std::endl;
+
 #pragma region Stack dynamic examples
 	StackDynamic<char> str;
 	str.push('A');
@@ -49,8 +51,6 @@ int main()
 	std::cout << str.isEmpty() << std::endl;
 	str.push('A');
 	std::cout << str.peek() << std::endl;
-
-
 #pragma endregion
 
 
