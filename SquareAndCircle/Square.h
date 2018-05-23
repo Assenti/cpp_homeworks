@@ -1,10 +1,12 @@
 #pragma once
+#include<iostream>
 class Square
 {
 protected:
 	int side;
 public:
 	Square(int);
-	~Square();
+	virtual void info();
+	virtual ~Square();
 };
 

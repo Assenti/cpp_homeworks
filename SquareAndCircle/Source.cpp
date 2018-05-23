@@ -4,7 +4,8 @@
 
 int main()
 {
-	CircleInSquare sample;
+	CircleInSquare sample(4,4);
+	sample.info();
 
 
 

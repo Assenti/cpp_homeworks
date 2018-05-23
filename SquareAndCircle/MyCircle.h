@@ -1,10 +1,12 @@
 #pragma once
+#include<iostream>
 class MyCircle
 {
 protected:
 	int radius;
 public:
-	MyCircle();
-	~MyCircle();
+	MyCircle(int);
+	virtual void info();
+	virtual ~MyCircle();
 };
 

@@ -27,12 +27,6 @@
     <ClCompile Include="CircleInSquare.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyPixel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IDraw.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyCircle.h">
@@ -42,12 +36,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CircleInSquare.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyPixel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IDraw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

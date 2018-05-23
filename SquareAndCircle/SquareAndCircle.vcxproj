@@ -116,17 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CircleInSquare.cpp" />
-    <ClCompile Include="IDraw.cpp" />
     <ClCompile Include="MyCircle.cpp" />
-    <ClCompile Include="MyPixel.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircleInSquare.h" />
-    <ClInclude Include="IDraw.h" />
     <ClInclude Include="MyCircle.h" />
-    <ClInclude Include="MyPixel.h" />
     <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
