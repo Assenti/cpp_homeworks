@@ -6,7 +6,7 @@ class CircleInSquare : public MyCircle, public Square
 {
 public:
 	CircleInSquare(int, int);
-	void info();
+	void info() override;
 	~CircleInSquare();
 };
 

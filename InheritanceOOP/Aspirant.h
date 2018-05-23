@@ -9,7 +9,7 @@ private:
 public:
 	Aspirant(std::string, std::string);
 	std::string getScientificWork();
-	void info();
+	void info() override;
 	~Aspirant();
 };
 
