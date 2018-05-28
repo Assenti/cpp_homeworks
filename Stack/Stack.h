@@ -1,4 +1,5 @@
 #pragma once
+#include "CustomException.h"
 
 //LIFO
 //Fixed size
@@ -14,9 +15,18 @@ public:
 		iterator = 0;
 	}
 
+	T * getData()
+	{
+		return * data;
+	}
+
 	void push(const T & elem)
 	{
-		if(iterator<size)
+		if (iterator > size)
+		{
+			throw std::overflow_error("stackoverflow");
+		}
+		else 
 		{
 			data[iterator++] = elem;
 		}
@@ -24,7 +34,14 @@ public:
 
 	T pop()
 	{
-		return data[--iterator];
+		if (data[0] == NULL)
+		{
+			throw CustomException();
+		}
+		else
+		{
+			return data[--iterator];
+		}
 	}
 
 	T peek()

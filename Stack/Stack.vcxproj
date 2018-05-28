@@ -115,13 +115,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CustomException.cpp" />
+    <ClCompile Include="CustomStackoverflowException.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stack.cpp" />
     <ClCompile Include="StackDynamic.cpp" />
+    <ClCompile Include="StackFactory.cpp" />
+    <ClCompile Include="StackFactoryException.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomException.h" />
+    <ClInclude Include="CustomStackoverflowException.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackDynamic.h" />
+    <ClInclude Include="StackFactory.h" />
+    <ClInclude Include="StackFactoryException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
