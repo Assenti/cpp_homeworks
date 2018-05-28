@@ -1,13 +1,13 @@
 #include <iostream>
 #include "Stack.h"
-#include "StackDynamic.h"
-#include <stack>
+#include <vector>
 #include <cassert>
 #include <exception>
 #include "CustomException.h"
 #include "StackFactory.h"
 #include "StackFactoryException.h"
-#include <vector>
+#include "StackDynamic.h"
+
 
 void test_push()
 {
@@ -22,7 +22,7 @@ void test_push()
 	}
 	catch (const std::overflow_error & ex)
 	{
-		assert(ex.what() == "stackoverflow");
+		assert(ex.what() == "Stackoverflow");
 	}
 }
 
@@ -45,19 +45,18 @@ void test_createStack()
 	int iter = 4;
 	while (iter > 0)
 	{
-		if (iter > 3)
+		try
 		{
-			throw std::bad_alloc();
+			if (iter < 1)
+				throw StackFactoryException();
+			else
+				StackFactory::createStack();
 		}
-		StackFactory::createStack();
-	}
-	try
-	{
-		StackFactory::createStack();
-	}
-	catch (const CustomException & ex)
-	{
-		assert(ex.what(), "There is no elements");
+		catch (const StackFactoryException & ex)
+		{
+			assert(ex.what() == "StackFactory exception");
+		}
+		iter--;
 	}
 }
 
@@ -69,7 +68,7 @@ void global_testing(void(*tested_function)(void))
 int main()
 {
 	
-	std::vector<void(*)(void)> tests = { test_push, test_pop };
+	std::vector<void(*)(void)> tests = { test_push, test_pop, test_createStack };
 	for (auto test : tests)
 	{
 		global_testing(test);
