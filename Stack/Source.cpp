@@ -1,11 +1,10 @@
-#include <iostream>
-#include "Stack.h"
 #include <vector>
 #include <cassert>
 #include <exception>
+#include <iostream>
+#include "Stack.h"
 #include "CustomException.h"
 #include "StackFactory.h"
-#include "StackFactoryException.h"
 #include "StackDynamic.h"
 
 
@@ -22,7 +21,7 @@ void test_push()
 	}
 	catch (const std::overflow_error & ex)
 	{
-		assert(ex.what() == "Stackoverflow");
+		assert((std::string)ex.what() == (std::string)"Stackoverflow");
 	}
 }
 
@@ -35,7 +34,7 @@ void test_pop()
 	}
 	catch (const CustomException & ex)
 	{
-		assert(ex.what() == "There is no elements");
+		assert((std::string)ex.what() == (std::string)"There is no elements");
 	}
 }
 
@@ -47,14 +46,11 @@ void test_createStack()
 	{
 		try
 		{
-			if (iter < 1)
-				throw StackFactoryException();
-			else
-				StackFactory::createStack();
+			StackFactory::creatStacks();
 		}
-		catch (const StackFactoryException & ex)
+		catch (const std::bad_alloc & ex)
 		{
-			assert(ex.what() == "StackFactory exception");
+			assert((std::string)ex.what() == (std::string)"bad allocation");
 		}
 		iter--;
 	}

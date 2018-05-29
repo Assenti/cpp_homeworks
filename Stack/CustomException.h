@@ -3,8 +3,9 @@
 class CustomException : std::exception
 {
 public:
+	const char * message;
 	char const* what() const override final;
-	CustomException();
-	~CustomException();
+	CustomException(const char *);
+	virtual ~CustomException();
 };
 

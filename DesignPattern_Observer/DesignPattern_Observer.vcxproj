@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{948A240F-92DB-4FD4-B467-77F08B887BA7}</ProjectGuid>
-    <RootNamespace>Stack</RootNamespace>
+    <ProjectGuid>{9B59F32D-59CA-4030-83BD-70962B941057}</ProjectGuid>
+    <RootNamespace>DesignPatternObserver</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -78,7 +78,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -115,17 +115,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CustomException.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Stack.cpp" />
-    <ClCompile Include="StackDynamic.cpp" />
-    <ClCompile Include="StackFactory.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CustomException.h" />
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="StackDynamic.h" />
-    <ClInclude Include="StackFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

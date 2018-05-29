@@ -28,7 +28,7 @@ public:
 		}
 		else 
 		{
-			data[iterator++] = elem;
+			
 		}
 	}
 
@@ -36,7 +36,7 @@ public:
 	{
 		if (data[0] == NULL)
 		{
-			throw CustomException();
+			throw CustomException("There is no elements");
 		}
 		else
 		{

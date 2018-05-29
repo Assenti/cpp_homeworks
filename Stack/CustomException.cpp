@@ -1,14 +1,13 @@
 #include "CustomException.h"
 
-
-
 char const * CustomException::what() const
 {
-	return "There is no elements";
+	return message;
 }
 
-CustomException::CustomException()
+CustomException::CustomException(const char * _message)
 {
+	message = _message;
 }
 
 
