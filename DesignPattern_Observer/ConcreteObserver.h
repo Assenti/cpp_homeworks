@@ -5,7 +5,6 @@
 class ConcreteObserver : public Observer
 {
 public:
-	Observable * observable;
 	void handleEvent() override;
 	ConcreteObserver();
 	~ConcreteObserver();

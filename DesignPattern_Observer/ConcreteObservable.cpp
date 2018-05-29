@@ -25,6 +25,11 @@ void ConcreteObservable::notifyObservers()
 	}
 }
 
+size_t ConcreteObservable::count()
+{
+	return observers.size();
+}
+
 ConcreteObservable::ConcreteObservable()
 {
 }

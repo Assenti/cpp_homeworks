@@ -8,6 +8,7 @@ public:
 	void addObserver(Observer * observer) override;
 	void removeObserver(Observer * observer) override;
 	void notifyObservers() override;
+	size_t count() override;
 	ConcreteObservable();
 	~ConcreteObservable();
 };
