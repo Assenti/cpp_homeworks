@@ -1,7 +1,7 @@
 #pragma once
 #include "CustomException.h"
 
-namespace stackFixed 
+namespace mystacks
 {
 //LIFO
 //Fixed size
@@ -38,7 +38,7 @@ public:
 	{
 		if (data[0] == NULL)
 		{
-			throw CustomException("There is no elements");
+			throw customException::CustomException("There is no elements");
 		}
 		else
 		{

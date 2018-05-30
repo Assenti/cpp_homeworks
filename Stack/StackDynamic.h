@@ -1,5 +1,5 @@
 #pragma once
-namespace mystack
+namespace mystacks
 {
 //LIFO
 //Float size

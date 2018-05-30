@@ -7,10 +7,9 @@
 #include "StackFactory.h"
 #include "StackDynamic.h"
 
-
 void test_push()
 {
-	Stack<int, 5> x;
+	mystacks::Stack<int, 5> x;
 	for (int i = 0; i < 5; i++)
 	{
 		x.push(i);
@@ -21,20 +20,20 @@ void test_push()
 	}
 	catch (const std::overflow_error & ex)
 	{
-		assert((std::string)ex.what() == (std::string)"Stackoverflow");
+		assert(ex.what() == "Stackoverflow");
 	}
 }
 
 void test_pop()
 {
-	Stack<int, 5> x;
+	mystacks::Stack<int, 5> x;
 	try
 	{
 		x.pop();
 	}
-	catch (const CustomException & ex)
+	catch (const customException::CustomException & ex)
 	{
-		assert((std::string)ex.what() == (std::string)"There is no elements");
+		assert(ex.what() == "There is no elements");
 	}
 }
 
@@ -45,11 +44,11 @@ void test_createStack()
 	{
 		try
 		{
-			stackFactory::StackFactory::creatStacks();
+			mystacks::StackFactory::creatStacks();
 		}
 		catch (const std::bad_alloc & ex)
 		{
-			assert((std::string)ex.what() == (std::string)"bad allocation");
+			assert(ex.what() == "bad allocation");
 		}
 		iter--;
 	}
@@ -62,9 +61,7 @@ void global_testing(void(*tested_function)(void))
 
 
 int main()
-{
-	mystack::StackDynamic<int> stack;
-	
+{	
 	std::vector<void(*)(void)> tests = { test_push, test_pop, test_createStack };
 	for (auto test : tests)
 	{

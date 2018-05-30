@@ -1,16 +1,16 @@
 #include "CustomException.h"
 
-char const * CustomException::what() const
+char const * customException::CustomException::what() const
 {
 	return message;
 }
 
-CustomException::CustomException(const char * _message)
+customException::CustomException::CustomException(const char * _message)
 {
 	message = _message;
 }
 
 
-CustomException::~CustomException()
+customException::CustomException::~CustomException()
 {
 }

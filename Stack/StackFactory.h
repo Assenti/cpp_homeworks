@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-namespace stackFactory
+namespace mystacks
 { 
 class StackFactory
 {
