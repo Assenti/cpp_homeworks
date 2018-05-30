@@ -1,5 +1,6 @@
 #pragma once
-
+namespace mystack
+{
 //LIFO
 //Float size
 template<class T>
@@ -80,3 +81,4 @@ public:
 
 };
 
+}

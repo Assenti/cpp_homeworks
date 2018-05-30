@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 namespace my
 {
@@ -14,6 +15,27 @@ namespace my
 		}
 		return res;
 	}
+
+	class Student {
+	private:
+		std::string name;
+		int age;
+	public:
+		Student(std::string name, int age) {
+			this->name = name;
+			this->age = age;
+		}
+		std::string getName() {
+			return name;
+		}
+		int getAge() {
+			return age;
+		}
+		void info() {
+			cout << name << ' ' << age << endl;
+		}
+		~Student() {}
+	};
 }
 
 

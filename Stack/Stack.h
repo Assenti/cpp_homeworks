@@ -1,6 +1,8 @@
 #pragma once
 #include "CustomException.h"
 
+namespace stackFixed 
+{
 //LIFO
 //Fixed size
 template<class T, size_t size>
@@ -100,4 +102,4 @@ public:
 	}
 
 };
-
+}

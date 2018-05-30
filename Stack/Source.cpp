@@ -38,7 +38,6 @@ void test_pop()
 	}
 }
 
-
 void test_createStack()
 {
 	int iter = 4;
@@ -46,7 +45,7 @@ void test_createStack()
 	{
 		try
 		{
-			StackFactory::creatStacks();
+			stackFactory::StackFactory::creatStacks();
 		}
 		catch (const std::bad_alloc & ex)
 		{
@@ -61,8 +60,10 @@ void global_testing(void(*tested_function)(void))
 	tested_function();
 }
 
+
 int main()
 {
+	mystack::StackDynamic<int> stack;
 	
 	std::vector<void(*)(void)> tests = { test_push, test_pop, test_createStack };
 	for (auto test : tests)

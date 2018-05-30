@@ -1,11 +1,11 @@
 #include "StackFactory.h"
 
-void StackFactory::createOneStack()
+void stackFactory::StackFactory::createOneStack()
 {
 	Stack<int, 5> stack;
 }
 
-void StackFactory::creatStacks()
+void  stackFactory::StackFactory::creatStacks()
 {
 	for (int i = 0; i < 100; i++)
 	{
@@ -15,11 +15,11 @@ void StackFactory::creatStacks()
 	}
 }
 
-StackFactory::StackFactory()
+stackFactory::StackFactory::StackFactory()
 {
 }
 
 
-StackFactory::~StackFactory()
+stackFactory::StackFactory::~StackFactory()
 {
 }

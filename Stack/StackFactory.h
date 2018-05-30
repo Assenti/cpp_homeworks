@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 
+namespace stackFactory
+{ 
 class StackFactory
 {
 public:
@@ -12,4 +14,5 @@ public:
 	StackFactory();
 	~StackFactory();
 };
+}
 
