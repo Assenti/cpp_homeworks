@@ -118,12 +118,14 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="IServer.cpp" />
     <ClCompile Include="Proxy.cpp" />
+    <ClCompile Include="Server.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h" />
     <ClInclude Include="IServer.h" />
     <ClInclude Include="Proxy.h" />
+    <ClInclude Include="Server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

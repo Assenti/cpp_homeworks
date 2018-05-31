@@ -3,8 +3,9 @@
 class IServer
 {
 public:
-	virtual void receiveData() = 0;
+	virtual void receiveData(std::string) = 0;
+	virtual void sendData() = 0;
 	IServer();
-	~IServer();
+	virtual ~IServer();
 };
 
