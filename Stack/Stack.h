@@ -28,10 +28,6 @@ public:
 		{
 			throw std::overflow_error("stackoverflow");
 		}
-		else 
-		{
-			
-		}
 	}
 
 	T pop()
