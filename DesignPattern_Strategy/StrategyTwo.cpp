@@ -4,7 +4,7 @@
 
 void StrategyTwo::use()
 {
-	std::cout << "String" << std::endl;
+	std::cout << "Int strategy is on using" << std::endl;
 }
 
 StrategyTwo::StrategyTwo()

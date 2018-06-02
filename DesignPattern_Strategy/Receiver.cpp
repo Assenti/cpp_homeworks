@@ -1,34 +1,18 @@
 #include "Receiver.h"
 
-
-
 void Receiver::useStrategy()
 {
-	
+	strategy->use();
 }
 
-void Receiver::setStrategy(Strategy * s)
+void Receiver::setStrategy(Strategy * _strategy)
 {
-	strategy = s;
-}
-
-void Receiver::getType(std::string s)
-{
-	try
-	{
-		std::stoi(s);
-		setStrategy(new StrategyOne());
-	}
-	catch (const std::exception & exc)
-	{
-		setStrategy(new StrategyTwo());
-	}
+	strategy = _strategy;
 }
 
 Receiver::Receiver()
 {
 }
-
 
 Receiver::~Receiver()
 {
