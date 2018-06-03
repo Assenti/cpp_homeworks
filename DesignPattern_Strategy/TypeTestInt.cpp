@@ -7,14 +7,8 @@ void TypeTestInt::setUp()
 
 void TypeTestInt::test()
 {
-	try
-	{
-		receiver->getType("text");
-	}
-	catch (const MyException & ex)
-	{
-		assert(ex.what() == "Not an integer");
-	}
+	receiver->getType(1); // int type refers to StrategyTwo that has id=2
+	assert(receiver->getChosenStrategyId() == 2);
 }
 
 void TypeTestInt::clean()

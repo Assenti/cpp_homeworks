@@ -7,14 +7,8 @@ void TypeTestString::setUp()
 
 void TypeTestString::test()
 {
-	try
-	{
-		receiver->getType(0);
-	}
-	catch (const MyException & ex)
-	{
-		assert(ex.what() == "Not a string");
-	}
+	receiver->getType("text"); // int type refers to StrategyOne that has id=1
+	assert(receiver->getChosenStrategyId() == 1);
 }
 
 void TypeTestString::clean()

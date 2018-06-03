@@ -45,12 +45,6 @@
     <ClCompile Include="TypeTestInt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyException.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TypeTestOther.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Strategy.h">
@@ -78,12 +72,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TypeTestInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyException.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TypeTestOther.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

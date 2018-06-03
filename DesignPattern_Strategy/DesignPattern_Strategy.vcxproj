@@ -116,8 +116,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ContextManager.cpp" />
-    <ClCompile Include="MyException.cpp" />
-    <ClCompile Include="TypeTestOther.cpp" />
     <ClCompile Include="Receiver.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Strategy.cpp" />
@@ -130,8 +128,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContextManager.h" />
-    <ClInclude Include="MyException.h" />
-    <ClInclude Include="TypeTestOther.h" />
     <ClInclude Include="Receiver.h" />
     <ClInclude Include="Strategy.h" />
     <ClInclude Include="StrategyOne.h" />

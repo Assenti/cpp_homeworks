@@ -115,7 +115,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\DesignPattern_Strategy\Test.cpp" />
+    <ClCompile Include="..\DesignPattern_Strategy\TestCase.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Document.cpp" />
+    <ClCompile Include="InsertCommand.cpp" />
+    <ClCompile Include="InsertTestCase.cpp" />
+    <ClCompile Include="MyReceiver.cpp" />
+    <ClCompile Include="UndoTestCase.cpp" />
     <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DesignPattern_Strategy\Test.h" />
+    <ClInclude Include="..\DesignPattern_Strategy\TestCase.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="Document.h" />
+    <ClInclude Include="InsertCommand.h" />
+    <ClInclude Include="InsertTestCase.h" />
+    <ClInclude Include="MyReceiver.h" />
+    <ClInclude Include="UndoTestCase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
