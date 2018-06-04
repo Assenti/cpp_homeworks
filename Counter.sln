@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesignPattern_Proxy", "Desi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesignPattern_Command", "DesignPattern_Command\DesignPattern_Command.vcxproj", "{D26ED681-25DD-4E46-BB15-3607E3ACB9FE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnakeGame", "SnakeGame\SnakeGame.vcxproj", "{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -221,6 +223,14 @@ Global
 		{D26ED681-25DD-4E46-BB15-3607E3ACB9FE}.Release|x64.Build.0 = Release|x64
 		{D26ED681-25DD-4E46-BB15-3607E3ACB9FE}.Release|x86.ActiveCfg = Release|Win32
 		{D26ED681-25DD-4E46-BB15-3607E3ACB9FE}.Release|x86.Build.0 = Release|Win32
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Debug|x64.ActiveCfg = Debug|x64
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Debug|x64.Build.0 = Debug|x64
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Debug|x86.ActiveCfg = Debug|Win32
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Debug|x86.Build.0 = Debug|Win32
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Release|x64.ActiveCfg = Release|x64
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Release|x64.Build.0 = Release|x64
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Release|x86.ActiveCfg = Release|Win32
+		{9564C6E1-FBE5-42F9-9486-BC3FD6C9FC46}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
