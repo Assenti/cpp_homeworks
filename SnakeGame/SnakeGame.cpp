@@ -30,12 +30,12 @@ void SnakeGame::play()
 			case 'd':
 				snake.direction = Snake::Right;
 				break;
-			case 'p':
+			case 'p': //pause
 				system("pause");
 				system("cls");
 				Drawer::initialDraw({ wall, food });
 				break;
-			case 'q':
+			case 'q': //quit & save
 				GameSaver::serialize();
 				state = Quit;
 				system("cls");
@@ -47,6 +47,8 @@ void SnakeGame::play()
 		if (snake.willEatItself() || snakeCrushesIntoWall())
 		{
 			state = Quit;
+			remove("snake.txt");
+			remove("food.txt");
 			break;
 		}
 		if (snakeEatsFood())
