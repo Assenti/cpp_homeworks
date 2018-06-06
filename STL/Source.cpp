@@ -75,6 +75,7 @@ int main()
 	sort(children.begin(), children.end(), compare);
 	for (auto i : children)
 		cout << i.name << ' ' << i.height << ' ' << i.weight << ' ' << i.age << endl;
+	
 	auto minny = min_element(children.begin(), children.end(), compare);
 	cout << minny->name << endl;
 	
@@ -84,11 +85,11 @@ int main()
 	double wanted_height = 115;
 
 
-	auto wanted = find(children.begin(), children.end(), [wanted_height](Child c)
+	auto wanted = find_if(children.begin(), children.end(), [wanted_height](Child & c)
 	{
-		if (c.height == wanted_height)
-			return &c;
+		return c.height == wanted_height;
 	});
+
 	cout << wanted->name << endl;
 	
 	
