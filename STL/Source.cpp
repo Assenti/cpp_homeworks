@@ -71,20 +71,25 @@ int main()
 	children.push_back(Child("Johny", 9, 138.8, 55));
 	children.push_back(Child("Katy", 3, 110.5, 35));
 	children.push_back(Child("Larry", 7, 130, 50));
+	children.push_back(Child("Peter", 4, 118, 53));
 	
+
+	//Sort
 	sort(children.begin(), children.end(), compare);
 	for (auto i : children)
 		cout << i.name << ' ' << i.height << ' ' << i.weight << ' ' << i.age << endl;
 	
+	//Min_element
 	auto minny = min_element(children.begin(), children.end(), compare);
 	cout << minny->name << endl;
 	
+	//Max_element
 	auto maxy = max_element(children.begin(), children.end(), compare);
 	cout << maxy->name << endl;
 
 	double wanted_height = 115;
 
-
+	//Find_if
 	auto wanted = find_if(children.begin(), children.end(), [wanted_height](Child & c)
 	{
 		return c.height == wanted_height;
@@ -92,7 +97,7 @@ int main()
 
 	cout << wanted->name << endl;
 	
-	
+	//Count_if
 	cout << count_if(children.begin(), children.end(), [wanted_height](Child c)
 	{
 		int cnt = 0;
@@ -101,6 +106,40 @@ int main()
 		return cnt;
 	});
 	cout << endl;
+
+	cout << "------------------------------" << endl;
+
+	//Reverse
+	reverse(children.begin(), children.end());
+	for (auto i : children)
+		cout << i.name << ' ' << i.height << ' ' << i.weight << ' ' << i.age << endl;
+
+
+	cout << "------------------------------" << endl;
+
+	//Random_shuffle
+	random_shuffle(children.begin(), children.end());
+	for (auto i : children)
+		cout << i.name << ' ' << i.height << ' ' << i.weight << ' ' << i.age << endl;
+
+	cout << "------------------------------" << endl;
+
+	//Partition
+	int wanted_age = 5;
+	vector<Child>::iterator bound = partition(children.begin(), children.end(), [wanted_age](Child & c) 
+	{
+		return c.age < wanted_age;
+	});
+
+	for (auto it = children.begin(); it != bound; ++it)
+		cout << it->age << endl;
+
+	//Is_sorted
+	cout << is_sorted(children.begin(), children.end(), compare) << endl;
+	sort(children.begin(), children.end(), compare);
+	cout << is_sorted(children.begin(), children.end(), compare) << endl;
+
+
 
 	system("pause");
 	return 0;
