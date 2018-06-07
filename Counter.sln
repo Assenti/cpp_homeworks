@@ -55,6 +55,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesignPattern_Flyweight", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesignPattern_State", "DesignPattern_State\DesignPattern_State.vcxproj", "{8F955243-4631-4B4A-9505-A20772B843DE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Date", "Date\Date.vcxproj", "{272312AE-8587-43A1-A1F9-8FB44859E0BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -271,6 +273,14 @@ Global
 		{8F955243-4631-4B4A-9505-A20772B843DE}.Release|x64.Build.0 = Release|x64
 		{8F955243-4631-4B4A-9505-A20772B843DE}.Release|x86.ActiveCfg = Release|Win32
 		{8F955243-4631-4B4A-9505-A20772B843DE}.Release|x86.Build.0 = Release|Win32
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Debug|x64.ActiveCfg = Debug|x64
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Debug|x64.Build.0 = Debug|x64
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Debug|x86.ActiveCfg = Debug|Win32
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Debug|x86.Build.0 = Debug|Win32
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Release|x64.ActiveCfg = Release|x64
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Release|x64.Build.0 = Release|x64
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Release|x86.ActiveCfg = Release|Win32
+		{272312AE-8587-43A1-A1F9-8FB44859E0BF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
