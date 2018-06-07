@@ -1,9 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <set>
 #include <map>
 #include <iostream>
 #include <string>
 #include <vector>
+#include <unordered_map>
 #include <algorithm>
+#include <queue>
 #include "Bus.h"
 #include "Child.h"
 using namespace std;
@@ -28,6 +31,11 @@ bool compare(Child & child1, Child & child2)
 			return false;
 	else
 		return false;
+}
+
+int calculate(const int & a, const int & b, int(*operation)(const int&, const int&))
+{ 
+	return operation(a, b); 
 }
 
 int main()
@@ -65,7 +73,7 @@ int main()
 		if (bus.getX() < 5 && bus.getY() < 5)
 			cout << "BINGO!" << bus.getX() << " and " << bus.getY() << endl;*/
 
-	vector<Child> children;
+	/*vector<Child> children;
 	children.push_back(Child("Benny", 5, 120, 40));
 	children.push_back(Child("Jimmy", 5, 115, 43.5));
 	children.push_back(Child("Johny", 9, 138.8, 55));
@@ -137,10 +145,60 @@ int main()
 	//Is_sorted
 	cout << is_sorted(children.begin(), children.end(), compare) << endl;
 	sort(children.begin(), children.end(), compare);
-	cout << is_sorted(children.begin(), children.end(), compare) << endl;
+	cout << is_sorted(children.begin(), children.end(), compare) << endl;*/
 
+	int a, b;
+	char o;
+	std::unordered_map<char, int(*)(const int &, const int&)>operations;
+	operations.insert(std::make_pair('+', [](const int& a, const int& b) { return a + b; }));
+	operations.insert(std::make_pair('-', [](const int& a, const int& b) { return a - b; }));
+	
+	std::string s;
+	std::getline(std::cin, s);
+	char * symbols = new char[s.length()];
+	for (int i = 0; i < s.length(); i++) symbols[i] = s[i];
+	std::queue<int> operands;
+	std::queue<char> operators;
+	const char * c = strtok(symbols, " ");
+	while (c != NULL)
+	{
+		if (isdigit(*c))
+		{
+			std::cout << "int: " << *c << std::endl;
+			operands.push((int)(*c - 48));
+		}
+		else
+		{
+			std::cout << "char: " << *c << std::endl;
+			operators.push(*c);
+		}
+		c = strtok(NULL, " ");
+	}
+	/*std::cin >> a >> o;
+	std::cout << calculate(a, b, operations[0]) << std::endl;
+	while (o != '=')
+	{
+		std::cin >> b;
+		a = calculate(a, b, operations[o]);
+		std::cin >> o;
+	}
+	
+	std::cout << a << std::endl;*/
+	
+	a = operands.front();
+	operands.pop();
+	while (!operands.empty() && !operators.empty())
+	{
+		b = operands.front();
+		o = operators.front();
+		a = calculate(a, b, operations[o]);
+		operands.pop();
+		operators.pop();
+	}
+	std::cout << a << std::endl;
+	
 
-
+	delete[] symbols;
 	system("pause");
 	return 0;
 }
