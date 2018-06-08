@@ -7,11 +7,14 @@
 
 int main()
 {
-	Automat automat(9);
+	int submit_application = 1, non_submit_application = 0;
+
+	Automat automat(submit_application);
 
 	automat.gotApplication();
 	automat.checkApplication();
 	automat.rentApartment();
+
 
 	system("pause");
 	return 0;

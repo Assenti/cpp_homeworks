@@ -1,9 +1,8 @@
 #pragma once
 #include "IAutomatState.h"
-#include "Automat.h"
+class Automat;
 
-class WaitingState :
-	public IAutomatState
+class WaitingState : public IAutomatState
 {
 private:
 	Automat * automat;

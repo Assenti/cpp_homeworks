@@ -6,8 +6,7 @@
 #include "GotApplicationState.h"
 #include "ApartmentRentedState.h"
 #include "FullyRentedState.h"
-class Automat :
-	public IAutomat
+class Automat :	public IAutomat
 {
 private:
 	IAutomatState * waitingState;

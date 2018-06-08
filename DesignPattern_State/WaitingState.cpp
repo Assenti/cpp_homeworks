@@ -1,4 +1,5 @@
 #include "WaitingState.h"
+#include "Automat.h"
 
 WaitingState::WaitingState(Automat * _automat)
 {

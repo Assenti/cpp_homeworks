@@ -1,12 +1,10 @@
 #include "GotApplicationState.h"
 
-
-
 GotApplicationState::GotApplicationState(Automat * _automat)
 {
 	automat = _automat;
 	srand(time(0));
-	random = rand() % 100000;
+	random = rand() % 100;
 }
 
 std::string GotApplicationState::gotApplication()
