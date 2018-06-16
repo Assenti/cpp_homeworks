@@ -10,6 +10,9 @@ int main()
 	std::string path = "c:\\";
 	fm.goToDirectory(path);
 
+	// dir
+	fm.showAllFilesInCurrentDirectory();
+
 	// mkdir
 	std::string dir_name = "temp";
 	fm.makeDirectory(dir_name);
