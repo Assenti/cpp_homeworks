@@ -1,21 +1,45 @@
 #include <iostream>
 #include <string>
-//#include <experimental\filesystem>
+#include "FileManager.h"
 
 
 int main()
 {
-	/*std::experimental::filesystem::path path;
-	std::cout << path.filename.string << std::endl;*/
+	FileManager fm;
+	// cd - notice: not works in this app
+	std::string path = "c:\\";
+	fm.goToDirectory(path);
+
+	// mkdir
+	std::string dir_name = "temp";
+	fm.makeDirectory(dir_name);
+
+	// rmdir
+	std::string dir_name = "temp";
+	fm.deleteDirectory(dir_name);
+
+	// echo ... > *.txt
+	std::string text_and_file_name = "text > file.txt";
+	fm.createFileWithRecord(text_and_file_name);
+
+	// copy file
+	std::string file_name = "file.txt";
+	std::string path = ".\temp";
+	fm.copyFile(file_name, path);
+
+	// move file
+	std::string file_name = "file.txt";
+	std::string path = ".\temp";
+	fm.cutFile(file_name, path);
 	
-	//Create file
-	std::string dir_name;
-	std::cin >> dir_name;
+	// del file
+	std::string file_name = "file.txt";
+	fm.deleteFile(file_name);
 
+	//search file
+	std::string file_name = "file.txt";
+	fm.searchFile(file_name);
 
-
-	//Delete file
-
-	system("pause");
+	std::cin.get();
 	return 0;
 }
